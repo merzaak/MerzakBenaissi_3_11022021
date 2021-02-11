@@ -1,0 +1,19 @@
+{
+  "name": "merzakbenaissi_3_11022021",
+  "version": "1.0.0",
+  "description": "projet  ohmyfood -formation dev web OC",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merzaak/MerzakBenaissi_3_11022021.git"
+  },
+  "author": "merzak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merzaak/MerzakBenaissi_3_11022021/issues"
+  },
+  "homepage": "https://github.com/merzaak/MerzakBenaissi_3_11022021#readme"
+}
