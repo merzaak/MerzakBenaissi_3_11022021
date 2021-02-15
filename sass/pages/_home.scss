@@ -85,28 +85,41 @@
         border-radius: 20px;
         margin: $layout-padding;
         box-shadow: 1px 1px 5px $color-background-position;
+        position: relative;
         cursor: pointer;
-        .card__img { 
-            height: 70%;
-            img{
+        .card__figure{
+            height: 300px;
+            background-color: $color-white;
+            border-radius: 20px;
+            .figure__img { 
+                height: 75%;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
             }
-        }
-        .card__description{
-            height: 30%;
-            padding: 20px;
-            background: $color-white;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            h3{
-                display: flex;
-                justify-content: space-between;
-                .fa-heart{
-                    font-size: 3rem;
-                    font-weight: lighter;
+            .figure__description{
+                height: 25%;
+                padding: 10px 20px 20px 20px;
+                background: $color-white;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                h3{
+                    display: flex;
+                    justify-content: space-between;
+                    .fa-heart{
+                        font-size: 3rem;
+                        font-weight: lighter;
+                    }
                 }
             }
+        }
+        .card__new{
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            color: $color-tertiary;
+            background-color: green;
+            padding: 5px;
+            border-radius: 5px;
         }
         @include mobile-only{
             width: 100%;

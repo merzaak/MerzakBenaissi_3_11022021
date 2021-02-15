@@ -277,29 +277,42 @@ footer ul a {
   border-radius: 20px;
   margin: 20px;
   box-shadow: 1px 1px 5px #D3D3D3;
+  position: relative;
   cursor: pointer;
 }
-.restaurants__items .card .card__img {
-  height: 70%;
+.restaurants__items .card .card__figure {
+  height: 300px;
+  background-color: #fff;
+  border-radius: 20px;
 }
-.restaurants__items .card .card__img img {
+.restaurants__items .card .card__figure .figure__img {
+  height: 75%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurants__items .card .card__description {
-  height: 30%;
-  padding: 20px;
+.restaurants__items .card .card__figure .figure__description {
+  height: 25%;
+  padding: 10px 20px 20px 20px;
   background: #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.restaurants__items .card .card__description h3 {
+.restaurants__items .card .card__figure .figure__description h3 {
   display: flex;
   justify-content: space-between;
 }
-.restaurants__items .card .card__description h3 .fa-heart {
+.restaurants__items .card .card__figure .figure__description h3 .fa-heart {
   font-size: 3rem;
   font-weight: lighter;
+}
+.restaurants__items .card .card__new {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #99E2D0;
+  background-color: green;
+  padding: 5px;
+  border-radius: 5px;
 }
 @media screen and (max-width: 860px) {
   .restaurants__items .card {
