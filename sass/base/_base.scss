@@ -5,9 +5,15 @@
     padding: 0;
     box-sizing: inherit;
 }
-body {
+html {
+    // 10px div by def of 16px
+    font-size: 62.5%;
     box-sizing: border-box;
     background: $color-white;
+    height: 100%;
+}
+.body{
+    height: 100%;
 }
 img {
     object-fit: cover;
