@@ -1,0 +1,28 @@
+.btn {
+    border-radius: 20px;
+    color: $color-white;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    padding: 10px 20px;
+    text-align: center;
+    margin: 20px 0;
+    text-align: center;
+    width: fit-content;
+    a{
+    color: $color-white;
+    }
+    @include mobile-only{
+        margin: 20px auto;
+    }
+    &.btn-order{
+        align-self: flex-end;
+        @include mobile-only{
+            align-self: center;
+            width: 50%;
+            margin-bottom: 40px;
+        }
+        @include tablet{
+            align-self: center;
+            margin-bottom: 40px;
+        }
+    }
+}
