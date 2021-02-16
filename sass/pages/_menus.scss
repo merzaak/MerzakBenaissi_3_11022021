@@ -45,8 +45,10 @@
     padding: $layout-padding;
     margin-top: -50px;
     z-index: 1;
-    .fa-heart{
-        margin-left: 40px;
+    .resto__heading{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
     }
     .resto__menu{
         display: flex;

@@ -40,10 +40,10 @@ body {
   line-height: 1.5;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Roboto", sans-serif;
   color: #000;
-  font-weight: 900;
+  font-weight: 800;
   margin: 10px 0;
 }
 
@@ -51,6 +51,11 @@ h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 3rem;
   font-weight: 800;
+}
+@media screen and (max-width: 860px) {
+  .resto__heading {
+    font-size: 2.5rem;
+  }
 }
 
 .btn {
@@ -252,7 +257,7 @@ footer ul a {
 }
 @media screen and (max-width: 860px) {
   .functioning ol li {
-    min-width: none;
+    min-width: 200px;
     width: 90%;
     max-width: 500px;
     margin: 20px auto;
@@ -407,8 +412,10 @@ footer ul a {
   margin-top: -50px;
   z-index: 1;
 }
-.resto .fa-heart {
-  margin-left: 40px;
+.resto .resto__heading {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 .resto .resto__menu {
   display: flex;

@@ -53,7 +53,7 @@
             cursor: pointer;
             @include main-shadow;
             @include small-device{
-                min-width: none;
+                min-width: 200px;
                 width: 90%;
                 max-width: 500px;
                 margin: 20px auto;
