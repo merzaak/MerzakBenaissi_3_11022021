@@ -1,3 +1,4 @@
+/*  logo de des pages restaurants*/
 .logo-menus{
     display: flex;
     align-items: center;
@@ -5,7 +6,7 @@
     width: 100%;
     background-color: $color-white;
     padding: 0 $layout-padding;
-    @include mobile-only{
+    @include small-device{
         flex-direction: row;
         margin: 0;
         position: fixed;
@@ -16,11 +17,12 @@
         font-size: 2rem;
     }
 }
+
 .resto-page{
     position: relative;
     height: auto;
     margin-bottom: 140px;
-    @include mobile-only{
+    @include small-device{
         margin-bottom: 200px;
         margin-top: 100px;
     }
@@ -30,6 +32,8 @@
     width: 100%;
     z-index: 0;
 }
+
+/*les menus*/
 .resto{
     position: relative;
     width: 100%;
@@ -47,10 +51,10 @@
     .resto__menu{
         display: flex;
         justify-content: space-between;
-        @include mobile-only{
+        @include small-device{
             flex-direction: column;
         }
-        @include tablet{
+        @include medium-device{
             flex-direction: column;
         }
     }
@@ -58,11 +62,11 @@
 
 .menu__category{
     width: 30%;
-    @include mobile-only{
+    @include small-device{
         width: 100%;
         margin-bottom: 40px;
     }
-    @include tablet{
+    @include medium-device{
         width: 70%;
         margin: 0 auto 40px auto
     }
@@ -79,8 +83,9 @@
     .article{
         background-color: $color-white;
         padding: 10px;
-        margin: 10px auto;
+        margin: 20px auto;
         border-radius: 20px;
+        @include main-shadow;
         p{
             display: flex;
             justify-content: space-between;

@@ -10,7 +10,7 @@ header{
         color: #000;
         font-size: 4rem;
     }
-    @include mobile-only{
+    @include small-device{
         flex-direction: column;
         width: 100%;
         padding: 0;

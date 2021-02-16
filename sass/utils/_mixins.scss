@@ -1,16 +1,30 @@
+//variables pour déterminer les breakpoints
 $breakpoints: (
-    mobile: 860px,
-    tablet: 1200px,
+    small: 860px,
+    medium: 1200px,
 );
 
-@mixin mobile-only {
-    @media screen and (max-width: map-get( $breakpoints , mobile)){
+ //media queries petits écrans
+@mixin small-device {
+    @media screen and (max-width: map-get( $breakpoints , small)){
         @content ;
     }
 };
 
-@mixin tablet {
-    @media screen and (min-width: map-get($breakpoints , mobile)) and (max-width: map-get($breakpoints, tablet)){
+ //media queries écrans moyens
+@mixin medium-device {
+    @media screen and (min-width: map-get($breakpoints , small)) and (max-width: map-get($breakpoints, medium)){
         @content ;
     }
 };
+ //shawdow
+ @mixin main-shadow ($color: $color-shadow) {
+     box-shadow: 3px 2px 11px 6px $color;
+ };
+  //background buttons
+  @mixin buttons-background{
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+  };
+@mixin buttons-hover{
+    background: linear-gradient(to top left, $color-secondary, $color-primary);
+}

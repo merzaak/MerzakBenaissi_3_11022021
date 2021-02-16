@@ -9,7 +9,7 @@
     &.container-menus{
         position: relative;
     }
-    @include mobile-only{
+    @include small-device{
         width: 100%;
         padding: 0;
     }

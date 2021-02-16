@@ -1,26 +1,30 @@
 .btn {
     border-radius: 20px;
     color: $color-white;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     padding: 10px 20px;
     text-align: center;
     margin: 20px 0;
     text-align: center;
     width: fit-content;
-    a{
-    color: $color-white;
+    @include main-shadow;
+    @include buttons-background;
+    &:hover{
+        @include buttons-hover;
     }
-    @include mobile-only{
+    a{
+        color: $color-white;
+    }
+    @include small-device{
         margin: 20px auto;
     }
     &.btn-order{
         align-self: flex-end;
-        @include mobile-only{
+        @include small-device{
             align-self: center;
             width: 50%;
             margin-bottom: 40px;
         }
-        @include tablet{
+        @include medium-device{
             align-self: center;
             margin-bottom: 40px;
         }

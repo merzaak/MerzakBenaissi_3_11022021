@@ -56,12 +56,16 @@ h1 {
 .btn {
   border-radius: 20px;
   color: #fff;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 10px 20px;
   text-align: center;
   margin: 20px 0;
   text-align: center;
   width: fit-content;
+  box-shadow: 3px 2px 11px 6px #CDCDCD;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.btn:hover {
+  background: linear-gradient(to top left, #FF79DA, #9356DC);
 }
 .btn a {
   color: #fff;
@@ -182,10 +186,12 @@ footer ul a {
   color: #fff;
 }
 
+/* Positionnement sur la page d'accueil */
 .localisation {
   background-color: #D3D3D3;
   padding: 20px;
   border-radius: 20px;
+  cursor: pointer;
 }
 .localisation .fa-map-marker-alt {
   margin-right: 10px;
@@ -212,6 +218,7 @@ footer ul a {
   }
 }
 
+/* section focntionnement */
 .functioning {
   margin: 40px 0;
   padding: 20px;
@@ -221,6 +228,12 @@ footer ul a {
   flex-flow: row wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 860px) {
+  .functioning ol {
+    flex-direction: column;
+    margin: auto;
+  }
+}
 .functioning ol li {
   position: relative;
   display: flex;
@@ -229,15 +242,30 @@ footer ul a {
   align-items: center;
   min-width: 300px;
   margin: 20px;
-  background-color: #F8F8F8;
   border-radius: 20px;
   padding: 20px;
+  background-color: #F8F8F8;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 2px 11px 6px #CDCDCD;
+}
+@media screen and (max-width: 860px) {
+  .functioning ol li {
+    min-width: none;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+  }
 }
 .functioning ol li .number {
   position: absolute;
   left: -3%;
   padding: 0;
   font-size: 1.4rem;
+  font-weight: lighter;
   background-color: #9356DC;
   width: 2.5rem;
   height: 2.5rem;
@@ -245,15 +273,14 @@ footer ul a {
   color: #fff;
   text-align: center;
 }
+.functioning ol li:hover {
+  background-color: #f2eafb;
+}
 .functioning ol li:hover .fas {
   color: #9356DC;
 }
-@media screen and (max-width: 860px) {
-  .functioning {
-    flex-direction: column;
-  }
-}
 
+/* section des restaurants*/
 .restaurants {
   padding: 20px;
   background: #F8F8F8;
@@ -276,43 +303,9 @@ footer ul a {
   height: 300px;
   border-radius: 20px;
   margin: 20px;
-  box-shadow: 1px 1px 5px #D3D3D3;
   position: relative;
   cursor: pointer;
-}
-.restaurants__items .card .card__figure {
-  height: 300px;
-  background-color: #fff;
-  border-radius: 20px;
-}
-.restaurants__items .card .card__figure .figure__img {
-  height: 75%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.restaurants__items .card .card__figure .figure__description {
-  height: 25%;
-  padding: 10px 20px 20px 20px;
-  background: #fff;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.restaurants__items .card .card__figure .figure__description h3 {
-  display: flex;
-  justify-content: space-between;
-}
-.restaurants__items .card .card__figure .figure__description h3 .fa-heart {
-  font-size: 3rem;
-  font-weight: lighter;
-}
-.restaurants__items .card .card__new {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  color: #99E2D0;
-  background-color: green;
-  padding: 5px;
-  border-radius: 5px;
+  box-shadow: 3px 2px 11px 6px #CDCDCD;
 }
 @media screen and (max-width: 860px) {
   .restaurants__items .card {
@@ -322,7 +315,46 @@ footer ul a {
     justify-items: center;
   }
 }
+.restaurants__items .card .card__new {
+  /* encarte "nouveau" */
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #1b6150;
+  background-color: #99E2D0;
+  font-weight: bold;
+}
 
+/* cartes cliquables des restaurants*/
+.card__figure {
+  height: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.card__figure .figure__img {
+  height: 75%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card__figure .figure__description {
+  height: 25%;
+  padding: 10px 20px 20px 20px;
+  background: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card__figure .figure__description h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.card__figure .figure__description h3 .fa-heart {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+/*  logo de des pages restaurants*/
 .logo-menus {
   display: flex;
   align-items: center;
@@ -362,6 +394,7 @@ footer ul a {
   z-index: 0;
 }
 
+/*les menus*/
 .resto {
   position: relative;
   width: 100%;
@@ -420,8 +453,9 @@ footer ul a {
 .menu__category .article {
   background-color: #fff;
   padding: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
   border-radius: 20px;
+  box-shadow: 3px 2px 11px 6px #CDCDCD;
 }
 .menu__category .article p {
   display: flex;

@@ -1,11 +1,13 @@
+/* Positionnement sur la page d'accueil */
 .localisation{
     background-color: $color-background-position;
     padding: $layout-padding;
     border-radius: 20px;
+    cursor: pointer;
     .fa-map-marker-alt{
         margin-right: 10px;
     }
-    @include mobile-only{
+    @include small-device{
         border-radius: 0;
         width: 100%;
         text-align: center;
@@ -17,13 +19,13 @@
     margin: 20px auto;
     padding: $layout-padding;
     border-radius: 20px;
-    @include mobile-only{
+    @include small-device{
         border-radius: 0;
         margin: 0;
         text-align: center;
     }
 }
-
+/* section focntionnement */
 .functioning{
     margin: 40px 0;
     padding: $layout-padding;
@@ -31,6 +33,10 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        @include small-device{
+            flex-direction: column;
+            margin: auto;
+        }
         li{
             position: relative;
             display: flex;
@@ -39,14 +45,27 @@
             align-items: center;
             min-width: 300px;
             margin: 20px;
-            background-color: $color-background;
             border-radius: 20px;
             padding:  $layout-padding;
+            background-color: $color-background;
+            font-size: 1.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            @include main-shadow;
+            @include small-device{
+                min-width: none;
+                width: 90%;
+                max-width: 500px;
+                margin: 20px auto;
+                padding: 20px 10px;
+                font-size: 1.5rem;
+            }
             .number{
                 position: absolute;
                 left: -3%;
                 padding: 0;
                 font-size: 1.4rem;
+                font-weight: lighter;
                 background-color: $color-primary;
                 width: 2.5rem;
                 height: 2.5rem;
@@ -54,20 +73,22 @@
                 color: $color-white;
                 text-align: center;
             }
-            &:hover .fas{
-                color: $color-primary;
+            &:hover{
+                background-color: lighten($color-primary, 35%); //éclaircir la couleur principale
+                .fas{
+                    color: $color-primary;
+                }
             }
         }
     }
-    @include mobile-only{
-        flex-direction: column;
-    }
 }
+
+ /* section des restaurants*/
 .restaurants{
     padding: $layout-padding;
     background: $color-background;
     border-radius: 20px;
-    @include mobile-only{
+    @include small-device{
         border-radius: 0;
     }
 }
@@ -76,57 +97,56 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: space-between;
-    @include mobile-only{
-        
-    }
     .card{
         width: 45%;
         height: 300px;
         border-radius: 20px;
         margin: $layout-padding;
-        box-shadow: 1px 1px 5px $color-background-position;
         position: relative;
         cursor: pointer;
-        .card__figure{
-            height: 300px;
-            background-color: $color-white;
-            border-radius: 20px;
-            .figure__img { 
-                height: 75%;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-            }
-            .figure__description{
-                height: 25%;
-                padding: 10px 20px 20px 20px;
-                background: $color-white;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
-                h3{
-                    display: flex;
-                    justify-content: space-between;
-                    .fa-heart{
-                        font-size: 3rem;
-                        font-weight: lighter;
-                    }
-                }
-            }
-        }
-        .card__new{
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            color: $color-tertiary;
-            background-color: green;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        @include mobile-only{
+        @include main-shadow;
+        @include small-device{
             width: 100%;
             margin:  $layout-padding auto;
             justify-content: center;
             justify-items: center;
         }
+        .card__new{/* encarte "nouveau" */
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color:  darken($color-tertiary, 50%);
+            background-color: $color-tertiary;
+            font-weight: bold;
+        }
+    }  
+}
+
+/* cartes cliquables des restaurants*/
+.card__figure{
+    height: 300px;
+    background-color: $color-white;
+    border-radius: 20px;
+    .figure__img { 
+        height: 75%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
-    
+    .figure__description{
+        height: 25%;
+        padding: 10px 20px 20px 20px;
+        background: $color-white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        h3{
+            display: flex;
+            justify-content: space-between;
+            .fa-heart{
+                font-size: 3rem;
+                font-weight: lighter;
+            }
+        }
+    }
 }
