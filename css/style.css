@@ -194,19 +194,44 @@ footer ul a {
 /* Positionnement sur la page d'accueil */
 .localisation {
   background-color: #D3D3D3;
-  padding: 20px;
+  padding: 5px;
   border-radius: 20px;
-  cursor: pointer;
-}
-.localisation .fa-map-marker-alt {
-  margin-right: 10px;
 }
 @media screen and (max-width: 860px) {
   .localisation {
     border-radius: 0;
+    padding: 0;
     width: 100%;
     text-align: center;
   }
+}
+
+.form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #D3D3D3;
+  font-size: 1.6rem;
+}
+.form label {
+  padding: 10px;
+  cursor: pointer;
+}
+.form input[type=text] {
+  padding: 10px;
+  background-color: #D3D3D3;
+  border: none;
+  font-weight: bold;
+  color: #000;
+  appearance: none;
+  border-radius: 20px;
+  font-size: 1.6rem;
+}
+.form input[type=text]:placeholder-shown {
+  font-weight: lighter;
 }
 
 .presentation {

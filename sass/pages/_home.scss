@@ -1,19 +1,45 @@
 /* Positionnement sur la page d'accueil */
 .localisation{
-    background-color: $color-background-position;
-    padding: $layout-padding;
-    border-radius: 20px;
-    cursor: pointer;
-    .fa-map-marker-alt{
-        margin-right: 10px;
-    }
+     background-color: $color-background-position;
+     padding: 5px;
+     border-radius: 20px;
     @include small-device{
         border-radius: 0;
+        padding: 0;
         width: 100%;
         text-align: center;
     }
 }
 
+.form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    background-color: $color-background-position;
+    font-size: 1.6rem;
+    label{
+        padding: 10px;
+        cursor: pointer;
+    }
+    input[type=text]{
+        padding: 10px;
+        background-color: $color-background-position;
+        border: none;
+        font-weight: bold;
+        color: #000;
+        appearance: none;
+        border-radius: 20px;
+        font-size: 1.6rem;
+        &:placeholder-shown {
+            font-weight: lighter;
+        }
+    }
+}
+
+//presentation
 .presentation{
     background-color: $color-background;
     margin: 20px auto;
