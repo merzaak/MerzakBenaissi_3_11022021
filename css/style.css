@@ -482,19 +482,47 @@ footer ul a {
   border-top: 3px solid #99E2D0;
   margin-bottom: 20px;
 }
-.menu__category .article {
+
+.article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   background-color: #fff;
-  padding: 10px;
   margin: 20px auto;
   border-radius: 20px;
   box-shadow: 3px 2px 11px 6px #CDCDCD;
 }
-.menu__category .article p {
+.article:hover .anim {
   display: flex;
-  justify-content: space-between;
 }
-.menu__category .article p .price {
+.article__description {
+  padding: 10px;
+}
+.article__check {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.article__check .far {
+  margin: auto;
+}
+.article .price {
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
   font-weight: bold;
+  width: 70px;
+  padding: 10px;
+}
+.article .anim {
+  width: 70px;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: none;
+}
+.article .anim .far {
+  background-color: #99E2D0;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

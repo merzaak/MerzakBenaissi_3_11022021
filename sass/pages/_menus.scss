@@ -82,18 +82,48 @@
         border-top: 3px solid $color-tertiary;
         margin-bottom: 20px;
     }
-    .article{
-        background-color: $color-white;
-        padding: 10px;
-        margin: 20px auto;
-        border-radius: 20px;
-        @include main-shadow;
-        p{
+}
+
+.article{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: $color-white;
+    margin: 20px auto;
+    border-radius: 20px;
+    @include main-shadow;
+    &:hover {
+        .anim{
             display: flex;
-            justify-content: space-between;
-            .price{
-                font-weight: bold;
-            }
+        }
+    }
+    &__description{
+        padding: 10px;
+    }
+    &__check{
+        display: flex;
+        flex-flow: row nowrap;
+        .far{
+            margin: auto;
+        }
+    }
+    .price{
+        display: flex;
+        text-align: center;
+        align-items: flex-end;
+        font-weight: bold;
+        width: 70px;
+        padding: 10px;
+    }
+    .anim{
+        width: 70px;
+        background-color: $color-tertiary;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: none;
+        .far{
+            background-color: $color-tertiary;
+            color: $color-white  ;
         }
     }
 }
