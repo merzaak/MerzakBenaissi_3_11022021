@@ -1,15 +1,35 @@
+/* boutons Explorer et Commander*/
 .btn {
+    position: relative;
+    z-index: 1;
     border-radius: 20px;
-    color: $color-white;
+    margin: 20px 0;
     padding: 10px 20px;
     text-align: center;
-    margin: 20px 0;
+    color: $color-white;
     text-align: center;
     width: fit-content;
+    background: $btn-bg;
     @include main-shadow;
-    @include buttons-background;
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border-radius: 20px;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background: $btn-bgLight;
+        opacity: 0;
+        transition: opacity 330ms;
+
+    }
     &:hover{
-        @include buttons-hover;
+        @include main-shadow($color: $color-shadow-btn);
+        &::after{
+            opacity: 1;
+        }
     }
     a{
         color: $color-white;
@@ -17,7 +37,7 @@
     @include small-device{
         margin: 20px auto;
     }
-    &.btn-order{
+    &.btn-order{ /*btn commander*/
         align-self: flex-end;
         @include small-device{
             align-self: center;
@@ -30,3 +50,141 @@
         }
     }
 }
+
+/*animation coeur*/
+/*.fa-heart{
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+    color: green;
+    font-weight: bold;
+    &::after{
+        display: inline-block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background: red;
+        opacity: 0;
+        transition: opacity 250ms;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+}
+*/
+
+.btnn {
+    font-weight: 100;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+        color: $color-primary;
+        & .btnn__bg {
+            opacity: 1;
+        }
+    }
+    &__bg {
+        transform-origin: top;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color:  $color-primary;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}
+/*
+.fa-heart{
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    background: red;
+}
+.fa-heart::before, .fa-heart::after { 
+    position: absolute; 
+    content: "";
+    margin-left: -60px; 
+    left: 20px; 
+    top: 0; 
+    width: 20px; 
+    height: 32px; 
+    background:$btn-bg; 
+    border: 1px solid red;
+    border-radius: 20px 20px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+    z-index: -1;
+    opacity: 1;
+} 
+.fa-heart::after  { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+    border: 1px solid red;
+}
+-*/
+
+
+.btn-like {
+    height: 4rem;
+    width: 4rem;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 330ms;
+        background: $btn-bg;
+    }
+    .fa-heart{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mix-blend-mode: lighten;
+        font-size: 3rem;
+        background-color: $color-background;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        transition: opacity 330ms 200ms;
+        &::before{
+            content: "\f004";
+        }
+    }
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+        .btn-like__empty{
+            opacity: 0;
+        }
+    }
+}
+

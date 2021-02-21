@@ -1,16 +1,21 @@
 //color
-$color-primary : #9356DC;
+$color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #fff;
 
-//background
+//btn background color
+$btn-bg : linear-gradient(to bottom right, $color-secondary, $color-primary);
+$btn-bgLight: linear-gradient(to top left, lighten($color-secondary, 5), lighten($color-primary, 5));
+
+//main background
 $color-background: #F8F8F8;
 $color-background-position:#D3D3D3;
 $color-background-footer :#282828;
 
 //shadow
 $color-shadow :#CDCDCD;
+$color-shadow-btn: $color-primary;
 
 //padding&margin
 $layout-padding: 20px;

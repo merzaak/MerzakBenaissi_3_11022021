@@ -19,12 +19,5 @@ $breakpoints: (
 };
  //shawdow
  @mixin main-shadow ($color: $color-shadow) {
-     box-shadow: 3px 2px 11px 6px $color;
+     box-shadow: 0px 0px 14px 2px $color;
  };
-  //background buttons
-  @mixin buttons-background{
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-  };
-@mixin buttons-hover{
-    background: linear-gradient(to top left, $color-secondary, $color-primary);
-}

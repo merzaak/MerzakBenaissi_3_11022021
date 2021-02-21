@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -52,30 +53,49 @@ h1, h2 {
   margin: 10px 0;
 }
 
-.resto__heading {
+.resto__heading h2 {
   font-family: "Shrikhand", sans-serif;
   font-size: 3rem;
   font-weight: 800;
 }
 @media screen and (max-width: 860px) {
-  .resto__heading {
+  .resto__heading h2 {
     font-size: 2.5rem;
   }
 }
 
+/* boutons Explorer et Commander*/
 .btn {
+  position: relative;
+  z-index: 1;
   border-radius: 20px;
-  color: #fff;
+  margin: 20px 0;
   padding: 10px 20px;
   text-align: center;
-  margin: 20px 0;
+  color: #fff;
   text-align: center;
   width: fit-content;
-  box-shadow: 3px 2px 11px 6px #CDCDCD;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 0px 14px 2px #CDCDCD;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top left, #ff93e1, #a16be0);
+  opacity: 0;
+  transition: opacity 330ms;
 }
 .btn:hover {
-  background: linear-gradient(to top left, #FF79DA, #9356DC);
+  box-shadow: 0px 0px 14px 2px #9356DC;
+}
+.btn:hover::after {
+  opacity: 1;
 }
 .btn a {
   color: #fff;
@@ -86,6 +106,7 @@ h1, h2 {
   }
 }
 .btn.btn-order {
+  /*btn commander*/
   align-self: flex-end;
 }
 @media screen and (max-width: 860px) {
@@ -100,6 +121,139 @@ h1, h2 {
     align-self: center;
     margin-bottom: 40px;
   }
+}
+
+/*animation coeur*/
+/*.fa-heart{
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+    color: green;
+    font-weight: bold;
+    &::after{
+        display: inline-block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background: red;
+        opacity: 0;
+        transition: opacity 250ms;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+}
+*/
+.btnn {
+  font-weight: 100;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.btnn:hover {
+  color: #9356DC;
+}
+.btnn:hover .btnn__bg {
+  opacity: 1;
+}
+.btnn__bg {
+  transform-origin: top;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #9356DC;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+/*
+.fa-heart{
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    background: red;
+}
+.fa-heart::before, .fa-heart::after { 
+    position: absolute; 
+    content: "";
+    margin-left: -60px; 
+    left: 20px; 
+    top: 0; 
+    width: 20px; 
+    height: 32px; 
+    background:$btn-bg; 
+    border: 1px solid red;
+    border-radius: 20px 20px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+    z-index: -1;
+    opacity: 1;
+} 
+.fa-heart::after  { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+    border: 1px solid red;
+}
+-*/
+.btn-like {
+  height: 4rem;
+  width: 4rem;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
+}
+.btn-like::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 330ms;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.btn-like .fa-heart {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  font-size: 3rem;
+  background-color: #F8F8F8;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 330ms 200ms;
+}
+.btn-like .fa-heart::before {
+  content: "";
+}
+.btn-like:hover::before {
+  opacity: 1;
+}
+.btn-like:hover .btn-like__empty {
+  opacity: 0;
 }
 
 .article__check .check__price {
@@ -271,6 +425,9 @@ footer ul a {
 }
 
 .presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #F8F8F8;
   margin: 20px auto;
   padding: 20px;
@@ -314,7 +471,7 @@ footer ul a {
   font-size: 1.8rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 3px 2px 11px 6px #CDCDCD;
+  box-shadow: 0px 0px 14px 2px #CDCDCD;
 }
 @media screen and (max-width: 860px) {
   .functioning ol li {
@@ -372,7 +529,7 @@ footer ul a {
   margin: 20px;
   position: relative;
   cursor: pointer;
-  box-shadow: 3px 2px 11px 6px #CDCDCD;
+  box-shadow: 0px 0px 14px 2px #CDCDCD;
 }
 @media screen and (max-width: 860px) {
   .restaurants__items .card {
@@ -406,19 +563,16 @@ footer ul a {
   border-top-right-radius: 20px;
 }
 .card__figure .figure__description {
+  display: flex;
+  justify-content: space-between;
   height: 25%;
   padding: 10px 20px 20px 20px;
   background: #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.card__figure .figure__description h3 {
-  display: flex;
-  justify-content: space-between;
-}
-.card__figure .figure__description h3 .fa-heart {
-  font-size: 3rem;
-  font-weight: lighter;
+.card__figure .figure__description .fa-heart {
+  background-color: #fff;
 }
 
 /*  logo de des pages restaurants*/
@@ -529,7 +683,7 @@ footer ul a {
   background-color: #fff;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 3px 2px 11px 6px #CDCDCD;
+  box-shadow: 0px 0px 14px 2px #CDCDCD;
 }
 .article__description {
   padding: 10px;
