@@ -713,6 +713,8 @@ footer ul a {
   padding: 10px;
   width: 60%;
   flex-grow: 1;
+}
+.article__description p, .article__description h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -768,6 +770,8 @@ footer ul a {
 .article:hover .article__description {
   flex-grow: 0;
   flex-shrink: 1;
+}
+.article:hover p, .article:hover h3 {
   flex-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
