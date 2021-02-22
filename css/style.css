@@ -1,4 +1,65 @@
 @charset "UTF-8";
+/*animer les lettres*/
+@keyframes myLoader {
+  0% {
+    font-size: 1em;
+    color: #9356DC;
+    opacity: 1;
+  }
+  50% {
+    font-size: 1em;
+    color: #FF79DA;
+    opacity: 1;
+  }
+  100% {
+    font-size: 2em;
+    color: #000;
+    opacity: 1;
+  }
+}
+/* pour animer la ligne verte*/
+@keyframes glow {
+  0% {
+    border-color: #99E2D0;
+    width: 15%;
+  }
+  50% {
+    border-color: #99E2D0;
+    width: 50%;
+  }
+  100% {
+    border-color: #99E2D0;
+    width: 15%;
+  }
+}
+/* pour faire disparaitre le loader*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+/* animer les plats*/
+@keyframes {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -123,91 +184,7 @@ h1, h2 {
   }
 }
 
-/*animation coeur*/
-/*.fa-heart{
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    overflow: hidden;
-    color: green;
-    font-weight: bold;
-    &::after{
-        display: inline-block;
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        bottom: 0;  
-        left: 0;
-        background: red;
-        opacity: 0;
-        transition: opacity 250ms;
-    }
-    &:hover{
-        &::after{
-            opacity: 1;
-        }
-    }
-}
-*/
-.btnn {
-  font-weight: 100;
-  color: #000;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
-.btnn:hover {
-  color: #9356DC;
-}
-.btnn:hover .btnn__bg {
-  opacity: 1;
-}
-.btnn__bg {
-  transform-origin: top;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: #9356DC;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
-
-/*
-.fa-heart{
-    position: relative;
-    z-index: 1;
-    opacity: 1;
-    background: red;
-}
-.fa-heart::before, .fa-heart::after { 
-    position: absolute; 
-    content: "";
-    margin-left: -60px; 
-    left: 20px; 
-    top: 0; 
-    width: 20px; 
-    height: 32px; 
-    background:$btn-bg; 
-    border: 1px solid red;
-    border-radius: 20px 20px 0 0; 
-    transform: rotate(-45deg); 
-    transform-origin: 0 100%; 
-    z-index: -1;
-    opacity: 1;
-} 
-.fa-heart::after  { 
-    left: 0; 
-    transform: rotate(45deg); 
-    transform-origin :100% 100%; 
-    border: 1px solid red;
-}
--*/
+/* animation des coeurs*/
 .btn-like {
   height: 4rem;
   width: 4rem;
@@ -256,6 +233,96 @@ h1, h2 {
   opacity: 0;
 }
 
+.loader {
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  animation-name: loader;
+  animation-delay: 3.2s;
+  animation-fill-mode: both;
+}
+.loader__title {
+  position: absolute;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 4rem;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+.loader__title .title__letter {
+  opacity: 0;
+  color: #000;
+  animation: myLoader 1500ms linear forwards;
+  animation-delay: 150ms;
+}
+.loader__title .title__letter--1 {
+  animation-delay: 187.5ms;
+}
+.loader__title .title__letter--2 {
+  animation-delay: 375ms;
+}
+.loader__title .title__letter--3 {
+  animation-delay: 562.5ms;
+}
+.loader__title .title__letter--4 {
+  animation-delay: 750ms;
+}
+.loader__title .title__letter--5 {
+  animation-delay: 937.5ms;
+}
+.loader__title .title__letter--6 {
+  animation-delay: 1125ms;
+}
+.loader__title .title__letter--7 {
+  animation-delay: 1312.5ms;
+}
+.loader__title .title__letter--8 {
+  animation-delay: 1500ms;
+}
+.loader__underline {
+  margin-top: 150px;
+  width: 15%;
+  border-bottom: 4px solid #99E2D0;
+  margin-bottom: 20px;
+  animation: glow 3000ms linear alternate both;
+  animation-delay: 250ms;
+}
+
+/*
+  .title span:nth-child(1) {
+    animation-delay:100ms;
+  }
+  .title span:nth-child(2) {
+    animation-delay:200ms;
+  }
+  .title span:nth-child(3) {
+    animation-delay:300ms;
+  }
+  .title span:nth-child(4) {
+    animation-delay:400ms;
+  }
+  .title span:nth-child(5) {
+    animation-delay:500ms;
+  }
+  .title span:nth-child(6) {
+    animation-delay:600ms;
+  }
+  .title span:nth-child(7) {
+    animation-delay:700ms;
+  }
+  .title span:nth-child(8) {
+    animation-delay:800ms;
+  }
+*/
 .article__check .check__price {
   transform: translateX(0);
   transition: transform 300ms linear 50ms;

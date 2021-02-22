@@ -1,0 +1,64 @@
+/*animer les lettres*/
+  @keyframes myLoader {
+    
+    0%{
+      font-size:1em;
+      color: #9356DC;
+      opacity: 1;
+    }
+    50%{
+      font-size: 1em;
+      color: #FF79DA;
+      opacity: 1;
+    }
+    100%{
+      font-size: 2em;
+      color: #000;
+      opacity: 1;
+    }
+  };
+/* pour animer la ligne verte*/
+  @keyframes glow{
+    0%{
+      border-color:$color-tertiary;
+      width: 15%;
+    }
+    
+    50%{
+      border-color:$color-tertiary;
+      width: 50%;
+    }
+    100%{
+      border-color:$color-tertiary;
+      width: 15%;
+    }
+  };
+/* pour faire disparaitre le loader*/
+  @keyframes loader{
+    0%{
+      opacity: 1;
+    }
+    50%{
+      opacity: .5;
+    }
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  }
+
+/* animer les plats*/
+@keyframes{
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0.3;
+  }
+  80%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 1;
+  }
+}

@@ -19,3 +19,8 @@ $color-shadow-btn: $color-primary;
 
 //padding&margin
 $layout-padding: 20px;
+
+//loader
+$anim-duration: 1500ms;
+$num-letter: 8;
+$anim-delay: $anim-duration / $num-letter;

@@ -1,0 +1,75 @@
+
+.loader {
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: $color-background;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  animation-name: loader;
+  animation-delay: 3.2s;
+  animation-fill-mode: both;
+  &__title {
+    position: absolute;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 4rem;
+    text-transform: lowercase; 
+    font-weight: 500;
+    .title__letter{
+      opacity: 0;
+      color: #000;
+      animation: myLoader $anim-duration linear forwards;
+      animation-delay: 150ms;
+      @for $i from 1 through $num-letter {
+        &--#{$i} {
+          animation-delay: $anim-delay * $i;
+        }
+      }
+    }
+  }
+  &__underline{
+    margin-top: 150px;
+    width: 15%;
+    border-bottom: 4px solid $color-tertiary;
+    margin-bottom: 20px;
+    animation: glow $anim-duration*2 linear alternate both;
+    animation-delay: 250ms;
+  }
+}
+
+
+
+
+  /*
+  .title span:nth-child(1) {
+    animation-delay:100ms;
+  }
+  .title span:nth-child(2) {
+    animation-delay:200ms;
+  }
+  .title span:nth-child(3) {
+    animation-delay:300ms;
+  }
+  .title span:nth-child(4) {
+    animation-delay:400ms;
+  }
+  .title span:nth-child(5) {
+    animation-delay:500ms;
+  }
+  .title span:nth-child(6) {
+    animation-delay:600ms;
+  }
+  .title span:nth-child(7) {
+    animation-delay:700ms;
+  }
+  .title span:nth-child(8) {
+    animation-delay:800ms;
+  }
+*/
