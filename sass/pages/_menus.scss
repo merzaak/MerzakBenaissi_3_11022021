@@ -92,7 +92,7 @@
     margin: 20px auto;
     border-radius: 10px;
     @include main-shadow;
-    /* animation*/
+    /* animation apparition des plats*/
     animation: plats 600ms both;
     @for $i from 1 through $num-plat {
         &--#{$i} {
@@ -112,37 +112,66 @@
         position: relative;
         display: flex;
         flex-flow: row nowrap;
-        .check__price{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            text-align: center;
-            align-items: flex-end;
-            font-weight: bold;
-            padding: 10px;
-        }
-        .check__slide{
-            position: relative;
-            display: flex;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            .slide__bar{
-                display: flex;
-                height: 100%;
-                width: 100%;
-                background-color: $color-tertiary;
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
-                .fa-check-circle{
-                    background-color: $color-tertiary;
-                    color: $color-white;
-                    font-size: 2.5rem;
-                    margin: auto;
-                }
-            }
-        }
     }  
 }
 
+/* animation du glissement de la cloche*/
+.check__price{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: flex-end;
+    font-weight: bold;
+    padding: 10px;
+    transform: translateX(0);
+    transition: transform 300ms linear 50ms;
+}
+.check__slide{
+    position: relative;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    .slide__bar{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-color: $color-tertiary;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform-origin: right;
+        transform :scaleX(0);
+        transition: transform 350ms linear;
+        .fa-check-circle{
+            background-color: $color-tertiary;
+            color: $color-white;
+            font-size: 2.5rem;
+            margin: auto;
+            transform: rotate(-180deg);
+            transition: transform 300ms linear 50ms;
+        }
+    }
+}
+//animation de la cloche à l'état :hover
+.article:hover {
+    .article__description{
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .check__price{
+        transform: translateX(-60px);
+    }
+    .check__slide{
+        .slide__bar{
+            transform :scaleX(1)
+        }
+        .fa-check-circle{
+            transform: rotate(0deg);
+        }
+    } 
+}
