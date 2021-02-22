@@ -92,6 +92,13 @@
     margin: 20px auto;
     border-radius: 10px;
     @include main-shadow;
+    /* animation*/
+    animation: plats 600ms both;
+    @for $i from 1 through $num-plat {
+        &--#{$i} {
+          animation-delay: $plat-anim-delay * $i;
+        }
+      }
     &__description{
         padding: 10px;
         width: 60%;

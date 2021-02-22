@@ -46,7 +46,7 @@
   }
 }
 /* animer les plats*/
-@keyframes {
+@keyframes plats {
   0% {
     opacity: 0;
   }
@@ -248,7 +248,7 @@ h1, h2 {
   justify-content: center;
   opacity: 1;
   animation-name: loader;
-  animation-delay: 3.2s;
+  animation-delay: 3.5s;
   animation-fill-mode: both;
 }
 .loader__title {
@@ -297,32 +297,6 @@ h1, h2 {
   animation-delay: 250ms;
 }
 
-/*
-  .title span:nth-child(1) {
-    animation-delay:100ms;
-  }
-  .title span:nth-child(2) {
-    animation-delay:200ms;
-  }
-  .title span:nth-child(3) {
-    animation-delay:300ms;
-  }
-  .title span:nth-child(4) {
-    animation-delay:400ms;
-  }
-  .title span:nth-child(5) {
-    animation-delay:500ms;
-  }
-  .title span:nth-child(6) {
-    animation-delay:600ms;
-  }
-  .title span:nth-child(7) {
-    animation-delay:700ms;
-  }
-  .title span:nth-child(8) {
-    animation-delay:800ms;
-  }
-*/
 .article__check .check__price {
   transform: translateX(0);
   transition: transform 300ms linear 50ms;
@@ -751,6 +725,20 @@ footer ul a {
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0px 0px 14px 2px #CDCDCD;
+  /* animation*/
+  animation: plats 600ms both;
+}
+.article--1 {
+  animation-delay: 250ms;
+}
+.article--2 {
+  animation-delay: 500ms;
+}
+.article--3 {
+  animation-delay: 750ms;
+}
+.article--4 {
+  animation-delay: 1000ms;
 }
 .article__description {
   padding: 10px;
