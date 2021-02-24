@@ -306,7 +306,7 @@ header .logo h1 {
   color: #000;
   font-size: 4rem;
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   header {
     width: 98%;
     flex-direction: row;
@@ -335,7 +335,7 @@ header .logo h1 {
     padding: 0;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .container.container-menus {
     width: 98%;
     padding: 0;
@@ -347,7 +347,7 @@ header .logo h1 {
     padding: 0 20px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .container {
     width: 98%;
     padding: 0 20px;
@@ -379,7 +379,7 @@ footer.footer-menus {
     width: 100%;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   footer.footer-menus {
     height: 100px;
   }
@@ -390,7 +390,7 @@ footer.footer-menus {
     margin-top: 40px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   footer {
     flex-flow: row wrap;
     margin-top: 40px;
@@ -407,7 +407,7 @@ footer .logo h1 {
     font-size: 4rem;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   footer .logo h1 {
     font-size: 4rem;
   }
@@ -422,7 +422,7 @@ footer ul {
     flex-flow: row wrap;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   footer ul {
     flex-flow: row wrap;
   }
@@ -446,7 +446,7 @@ footer ul a {
     border-radius: 20px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .location {
     width: auto;
     padding: 5;
@@ -497,7 +497,7 @@ footer ul a {
     margin: 20px auto;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .presentation {
     border-radius: 20px;
     margin: 20px auto;
@@ -521,7 +521,7 @@ footer ul a {
     margin: auto;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .functioning ol {
     flex-flow: row wrap;
     margin: auto;
@@ -554,7 +554,7 @@ footer ul a {
     font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .functioning ol li {
     min-width: 300px;
     width: auto;
@@ -594,7 +594,7 @@ footer ul a {
     border-radius: 20px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .restaurants {
     border-radius: 20px;
     margin-bottom: 20px;
@@ -624,7 +624,7 @@ footer ul a {
     margin: 20px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .restaurants__items .card {
     width: 45%;
     margin: 20px;
@@ -683,7 +683,7 @@ footer ul a {
     position: static;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .logo-menus {
     position: static;
   }
@@ -705,7 +705,7 @@ footer ul a {
     margin-top: auto;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .resto-page {
     margin-bottom: 140px;
     margin-top: auto;
@@ -723,7 +723,7 @@ footer ul a {
     border-top-right-radius: 20px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .image {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -735,7 +735,7 @@ footer ul a {
     border-top-right-radius: 20px;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .image img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -781,7 +781,7 @@ footer ul a {
     width: 30%;
   }
 }
-@media screen and (min-width: 860px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   .menu__category {
     width: 70%;
     margin: 0 auto 40px auto;
