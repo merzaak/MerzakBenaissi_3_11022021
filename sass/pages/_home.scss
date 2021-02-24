@@ -166,8 +166,8 @@
             margin:  $layout-padding;
         }
         @include medium-device{
-            width: 45%;
-            margin:  $layout-padding;
+            width: 80%;
+            margin:  $layout-padding auto;
         }
         .card__new{/* encarte "nouveau" */
             position: absolute;
