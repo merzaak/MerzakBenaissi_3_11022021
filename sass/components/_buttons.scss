@@ -3,7 +3,7 @@
     position: relative;
     z-index: 1;
     border-radius: 20px;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 10px 20px;
     text-align: center;
     color: $color-white;
@@ -23,7 +23,6 @@
         background: $btn-bgLight;
         opacity: 0;
         transition: opacity 330ms;
-
     }
     &:hover{
         @include main-shadow($color: $color-shadow-btn);
@@ -34,19 +33,15 @@
     a{
         color: $color-white;
     }
-    @include small-device{
-        margin: 20px auto;
+    @include desktop{
+        margin: 20px 0;
     }
     &.btn-order{ /*btn commander*/
-        align-self: flex-end;
-        @include small-device{
-            align-self: center;
-            width: 50%;
-            margin-bottom: 40px;
-        }
-        @include medium-device{
-            align-self: center;
-            margin-bottom: 40px;
+        align-self: center;
+        width: fit-content;
+        margin-bottom: 40px;
+        @include desktop{
+            align-self: flex-end;
         }
     }
 }

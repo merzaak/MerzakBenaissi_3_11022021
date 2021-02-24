@@ -4,9 +4,9 @@ $breakpoints: (
     medium: 1200px,
 );
 
- //media queries petits écrans
-@mixin small-device {
-    @media screen and (max-width: map-get( $breakpoints , small)){
+//media queries desktop
+@mixin desktop {
+    @media screen and (min-width: map-get( $breakpoints , medium)){
         @content ;
     }
 };

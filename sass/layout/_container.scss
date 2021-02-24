@@ -1,16 +1,26 @@
 .container{
-    
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
-    padding: $layout-padding 0;
     min-height: 100vh;
     &.container-menus{
         position: relative;
+        @include desktop{
+            width: 98%;
+            padding: 0;
+        }
+        @include medium-device{
+            width: 98%;
+            padding: 0;
+        }
     }
-    @include small-device{
-        width: 100%;
-        padding: 0;
+    @include desktop{
+        width: 98%;
+        padding: 0 $layout-padding ;
+    }
+    @include medium-device{
+        width: 98%;
+        padding: 0 $layout-padding ;
     }
 }

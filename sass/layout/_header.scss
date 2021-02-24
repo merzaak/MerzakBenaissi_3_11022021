@@ -1,20 +1,25 @@
 header{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    width: 100%;
     padding: 0;
+    margin: 0;
+    align-items: center;
     .logo h1{
         font-family: "Shrikhand", sans-serif;
         font-weight: 500;
         color: #000;
         font-size: 4rem;
     }
-    @include small-device{
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 0;
+    @include medium-device{
+        width: 98%;
+        flex-direction: row;
     }
+    @include desktop{
+        flex-direction: row;
+        width: 98%;
+    }
+    
 }
 

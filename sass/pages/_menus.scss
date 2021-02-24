@@ -6,11 +6,14 @@
     width: 100%;
     background-color: $color-white;
     padding: 0 $layout-padding;
-    @include small-device{
-        flex-direction: row;
-        margin: 0;
-        position: fixed;
-        z-index: 2;
+    margin: 0;
+    position: fixed;
+    z-index: 2;
+    @include desktop{
+        position: static;
+    }
+    @include medium-device{
+        position: static;
     }
     .fa-arrow-left{
         margin-right: 50px;
@@ -21,16 +24,39 @@
 .resto-page{
     position: relative;
     height: auto;
-    margin-bottom: 140px;
-    @include small-device{
-        margin-bottom: 200px;
-        margin-top: 100px;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    @include desktop{
+        margin-bottom: 140px;
+        margin-top: auto;
+    }
+    @include medium-device{
+        margin-bottom: 140px;
+        margin-top: auto;
     }
 }
 .image{
     height: 500px;
     width: 100%;
     z-index: 0;
+    @include desktop{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    @include medium-device{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    img{
+        @include desktop{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        @include medium-device{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    }
 }
 
 /*les menus*/
@@ -52,21 +78,19 @@
     }
     .resto__menu{
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        @include small-device{
-            flex-direction: column;
-        }
-        @include medium-device{
-            flex-direction: column;
+        @include desktop{
+            flex-flow: row nowrap;
         }
     }
 }
 /*blocs des menus*/
 .menu__category{
-    width: 30%;
-    @include small-device{
-        width: 100%;
-        margin-bottom: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+    @include desktop{
+        width: 30%;
     }
     @include medium-device{
         width: 70%;
