@@ -442,14 +442,14 @@ footer ul a {
 @media screen and (min-width: 1200px) {
   .location {
     width: auto;
-    padding: 5;
+    padding: 5px;
     border-radius: 20px;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1200px) {
   .location {
     width: auto;
-    padding: 5;
+    padding: 5px;
     border-radius: 20px;
   }
 }
